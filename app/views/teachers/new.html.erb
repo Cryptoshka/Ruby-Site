@@ -1,0 +1,42 @@
+<h2 class="news_header">Add a teacher</h2>
+<%= form_for @teacher do |f|%>
+    <fieldset>
+      <legend>Teacher data:</legend>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :name, 'Name:' %>
+        </p>
+        <%= f.text_field :name %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :universita, 'Home university:' %>
+        </p>
+        <%= f.text_field :universita %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :tutorie, 'Time for consultations:' %>
+        </p>
+        <%= f.time_select :tutorie %><br>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :add_info, 'Additional info:' %>
+        </p>
+        <%= f.text_area :add_info %><br>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :foto, 'Foto:' %>
+        </p>
+        <%= f.text_field :foto %><br>
+      </div>
+      <div class='form-control-group'>
+        <%= f.submit %>
+      </div>
+    </fieldset>
+<% end  %>
+<ul1>
+  <li><%= link_to 'Back to teachers', teachers_path %></li>
+</ul1>

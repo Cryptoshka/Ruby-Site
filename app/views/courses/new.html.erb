@@ -1,0 +1,52 @@
+<h2 class="news_header">New course</h2>
+<% flash.each do |name, message| %>
+    <%= content_tag :div, message, class: name %>
+<% end %>
+
+<%= form_for @course do |f| %>
+    <fieldset>
+      <legend>Course data</legend>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :title, 'Title:' %>
+        </p>
+        <%= f.text_field :title %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :year, 'Year (for a master degree, please, sum up 3):' %>
+        </p>
+        <%= f.text_field :year %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :program, 'Program:' %>
+        </p>
+        <%= f.text_area :program %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :books, 'Books:' %>
+        </p>
+        <%= f.text_area :books %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :tpcheckbox, 'Theory or practice:' %>
+        </p>
+        <%= f.text_field :tpcheckbox %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :teacher_id, 'Teacher:' %>
+        </p>
+        <%= collection_select(:course, :teacher_id, @teachers, :id, :name) %>
+      </div>
+      <div class='form-control-group'>
+        <%= f.submit %>
+      </div>
+    </fieldset>
+<% end %>
+<ul1>
+  <li><%= link_to 'Back to courses', courses_path %></li>
+</ul1>

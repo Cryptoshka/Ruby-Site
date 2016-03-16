@@ -1,0 +1,13 @@
+<h2 class="news_header">About this room</h2>
+
+<h2 class='room_number'><%= @room.number.titleize %></h2>
+
+<%= image_tag("rooms/#{@room.fotoroom}", {class: 'room_image'}) %>
+
+<p>
+  Description: <%= @room.description %>
+</p>
+
+<ul1>
+  <li><%= link_to 'Back to rooms', rooms_path %></li>
+</ul1>

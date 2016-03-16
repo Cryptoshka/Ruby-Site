@@ -1,0 +1,24 @@
+<h2 class="news_header">Details</h2>
+
+<h2 class='teacher_name'><%= @teacher.name.titleize %></h2>
+
+<%= image_tag("teachers/#{@teacher.foto}", {class: 'teacher_image'}) %>
+
+<p>
+  Finished: <%= @teacher.universita %>
+</p>
+
+<p>
+  Consultation time: <%= @teacher.tutorie %>
+</p>
+
+<p>
+  Personal info: <%= @teacher.add_info %>
+</p>
+
+<p>
+  <%= link_to "Teacher's courses", courses_path(teacher_id: @teacher.id) %>
+</p>
+<ul1>
+  <li><%= link_to 'Back to teachers', teachers_path %></li>
+</ul1>

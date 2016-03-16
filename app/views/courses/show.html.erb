@@ -1,0 +1,23 @@
+<h2 class="news_header">Detailed information</h2>
+
+<h2 class='course_title'><%= @course.title.titleize %></h2>
+
+<p>
+  Year: <%= @course.year %>
+</p>
+
+<p>
+  Program: <%= @course.program %>
+</p>
+
+<p>
+  Recommended books: <%= @course.books %>
+</p>
+
+<p>
+  Theory or practice: <%= @course.tpcheckbox %>
+</p>
+
+<ul1>
+  <li><%= link_to 'Back to courses', courses_path %></li>
+</ul1>

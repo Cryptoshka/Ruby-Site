@@ -1,0 +1,29 @@
+<h2 class="news_header">Courses List</h2>
+<ul1><li><%= link_to 'Create a new course', new_course_path %></li></ul1>
+<% flash.each do |name, message| %>
+    <%= content_tag :div, message, class: name %>
+<% end %>
+<table id='courses_list'>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Theory or practice</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @courses.each do |c| %>
+      <tr>
+        <td><%= c.title %></td>
+        <td><%= c.year %></td>
+        <td><%= c.tpcheckbox %></td>
+        <td><%= link_to 'Detailed information', course_path(c) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<ul1>
+  <li><%= link_to 'Choose the appropriate year', courses_by_year_path %></li>
+</ul1>
+

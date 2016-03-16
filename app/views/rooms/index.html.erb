@@ -1,0 +1,19 @@
+<h2 class="news_header">Rooms List</h2>
+<ul1><li><%= link_to 'Add an auditorium!', new_room_path %></li></ul1>
+<table id='rooms_list'>
+  <thead>
+  <tr>
+    <th>Number</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @rooms.each do |r| %>
+      <tr>
+        <td><%= r.number %></td>
+        <td><%= link_to 'About this room', room_path(r) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+

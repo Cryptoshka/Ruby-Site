@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NAoS</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <%= image_tag("logo/logo.jpg", align: 'left', alt: 'NAoS') %>
+  <h1>National Academy of Sciences</h1>
+</header>
+
+<section id="liner"></section>
+
+<section id="main_menu">
+  <ul2>
+    <li><%= link_to 'Contacts', contacts_path %></li>
+    <li><%= link_to 'Academy council', members_path %></li>
+    <li><%= link_to 'Student Support', helps_path %></li>
+    <li><%= link_to 'Admin part', admin_path %></li>
+  </ul2>
+  <ul1>
+    <li><%= link_to 'Back to index', '/' %></li>
+  </ul1>
+</section>
+
+<aside id="glav_part">
+<%= yield %>
+</aside>
+
+</body>
+</html>

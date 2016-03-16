@@ -1,0 +1,30 @@
+<h2 class="news_header">Add a room</h2>
+<%= form_for @room do |f|%>
+    <fieldset>
+      <legend>Room data:</legend>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :number, 'Number of auditorium:' %>
+        </p>
+        <%= f.text_field :number %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :fotoroom, 'Photo of auditorium:' %>
+        </p>
+        <%= f.text_field :fotoroom %>
+      </div>
+      <div class='form-control-group'>
+        <p>
+          <%= f.label :description, 'Description:' %>
+        </p>
+        <%= f.text_area :description %>
+      </div>
+      <div class='form-control-group'>
+        <%= f.submit %>
+      </div>
+    </fieldset>
+<% end  %>
+<ul1>
+  <li><%= link_to 'Back to rooms', rooms_path %></li>
+</ul1>
